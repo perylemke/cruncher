@@ -8,9 +8,9 @@ services:
     volumes:
       - ./src:/src
       - ./config/nginx:/etc/nginx/conf.d
-      - /static:/static
     depends_on:
       - web
+
   web:
     build: .
     container_name: dg01
@@ -19,12 +19,26 @@ services:
       - db
     volumes:
       - ./src:/src
-      - /static:/static
     expose:
       - "8000"
     environment:
       APP_ENV: 'development'
+      APP_DATABASE_PASSWORD: 'p05Tg35'
+      APP_STATIC_ROOT: './src/static/'
 
   db:
     image: postgres:latest
     container_name: ps01
+    environment:
+      POSTGRES_PASSWORD: 'p05Tg35'
+
+  scrap:
+    build: .
+    container_name: sc02
+    depends_on:
+      - db
+    volumes:
+      - ./src/scraper:/src
+    tty: true
+    environment:
+      APP_DATABASE_PASSWORD: 'p05Tg35'

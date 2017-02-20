@@ -12,10 +12,10 @@ services:
       - web
 
   web:
-    restart: always
+    restart: al
     build: .
     container_name: dg01
-    command: bash -c "python manage.py makemigrations && python manage.py migrate && gunicorn web.wsgi -b 0.0.0.0:8000"
+    command: bash -c "gunicorn web.wsgi -b 0.0.0.0:8000"
     depends_on:
       - db
     volumes:

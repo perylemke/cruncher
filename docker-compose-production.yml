@@ -12,7 +12,7 @@ services:
       - web
 
   web:
-    restart: al
+    restart: always
     build: .
     container_name: dg01
     command: bash -c "gunicorn web.wsgi -b 0.0.0.0:8000"

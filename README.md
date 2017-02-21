@@ -61,6 +61,6 @@ You're ready to go! Consume the API at `http://localhost:8000/api/v1/`.
 
 # Run in production
 
-Access the URL - https://cruncher.oclubecast.com.br/api/v1/authors/
+Access the URL - http://cruncher.oclubecast.com.br/api/v1/
 
 ### Thanks!

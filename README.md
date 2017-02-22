@@ -55,7 +55,7 @@ docker-compose run web python manage.py migrate
 ```
 Run the crawler (here with 100 requests limit):
 ```bash
-docker-compose run scrap scrapy crawl cake --set CLOSESPIDER_PAGECOUNT=100
+docker-compose run scrap scrapy crawl cruncher --set CLOSESPIDER_PAGECOUNT=100
 ```
 You're ready to go! Consume the API at `http://localhost:8000/api/v1/`.
 

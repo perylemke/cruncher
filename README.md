@@ -1,6 +1,6 @@
 ![Cheesecake](img/logoCKL.png)
 
-# Cruncher aka Scrapery =)
+**Cruncher aka Scrapery =)**
 ===================
 Cruncher is an application that crawls over [TechCrunch](https://techcrunch.com) informations about posts, stores data about authors, articles and provides a web API to consume it.
 
@@ -61,6 +61,6 @@ You're ready to go! Consume the API at `http://localhost:8000/api/v1/`.
 
 # Run in production
 
-Access the URL - http://cruncher.oclubecast.com.br/api/v1/
+Now Cruncher is not more in production. Clone this repository and DO IT! :)
 
 ### Thanks!

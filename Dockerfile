@@ -3,6 +3,7 @@ USER root
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /config
 ADD /config/requirements.pip /config/
+RUN export LD_RUN_PATH=/usr/local/lib
 RUN pip install -r /config/requirements.pip
 RUN mkdir /src;
 WORKDIR /src
